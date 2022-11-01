@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>day06-vue组件开发 | yuan</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="yuan">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.1e9b8424.css" as="style"><link rel="preload" href="/assets/js/app.d4469e62.js" as="script"><link rel="preload" href="/assets/js/3.9c61cb9f.js" as="script"><link rel="preload" href="/assets/js/1.b69fc7ca.js" as="script"><link rel="preload" href="/assets/js/99.c5382660.js" as="script"><link rel="prefetch" href="/assets/js/10.ec3680e3.js"><link rel="prefetch" href="/assets/js/100.b564a769.js"><link rel="prefetch" href="/assets/js/101.1cbe7d82.js"><link rel="prefetch" href="/assets/js/102.abfe6a1c.js"><link rel="prefetch" href="/assets/js/103.d6295ccd.js"><link rel="prefetch" href="/assets/js/104.20f3563d.js"><link rel="prefetch" href="/assets/js/105.3b496fef.js"><link rel="prefetch" href="/assets/js/106.b200599f.js"><link rel="prefetch" href="/assets/js/107.869c797d.js"><link rel="prefetch" href="/assets/js/108.aacfcad9.js"><link rel="prefetch" href="/assets/js/109.3333a84b.js"><link rel="prefetch" href="/assets/js/11.e8fb3979.js"><link rel="prefetch" href="/assets/js/110.8ec2a40a.js"><link rel="prefetch" href="/assets/js/111.803d62a8.js"><link rel="prefetch" href="/assets/js/112.bb70050c.js"><link rel="prefetch" href="/assets/js/113.af2a82f2.js"><link rel="prefetch" href="/assets/js/114.73edfd5e.js"><link rel="prefetch" href="/assets/js/115.74eecfbd.js"><link rel="prefetch" href="/assets/js/116.ec6290f1.js"><link rel="prefetch" href="/assets/js/117.7365eba4.js"><link rel="prefetch" href="/assets/js/118.244cfa29.js"><link rel="prefetch" href="/assets/js/119.94069415.js"><link rel="prefetch" href="/assets/js/12.18280bf4.js"><link rel="prefetch" href="/assets/js/120.8e017c2a.js"><link rel="prefetch" href="/assets/js/121.169a3529.js"><link rel="prefetch" href="/assets/js/122.63b53983.js"><link rel="prefetch" href="/assets/js/123.b6d193e4.js"><link rel="prefetch" href="/assets/js/124.52c0e682.js"><link rel="prefetch" href="/assets/js/125.6759475f.js"><link rel="prefetch" href="/assets/js/126.f8741e6c.js"><link rel="prefetch" href="/assets/js/127.c9aa289e.js"><link rel="prefetch" href="/assets/js/13.4bece9b5.js"><link rel="prefetch" href="/assets/js/14.41a1d31a.js"><link rel="prefetch" href="/assets/js/15.5485d6c0.js"><link rel="prefetch" href="/assets/js/16.dc525c6d.js"><link rel="prefetch" href="/assets/js/17.d5abbe97.js"><link rel="prefetch" href="/assets/js/18.082371d1.js"><link rel="prefetch" href="/assets/js/19.6b66ad35.js"><link rel="prefetch" href="/assets/js/20.8875158a.js"><link rel="prefetch" href="/assets/js/21.df095fb9.js"><link rel="prefetch" href="/assets/js/22.1adee099.js"><link rel="prefetch" href="/assets/js/23.46d7f02c.js"><link rel="prefetch" href="/assets/js/24.2fb75b4a.js"><link rel="prefetch" href="/assets/js/25.ca8067b4.js"><link rel="prefetch" href="/assets/js/26.96ca5817.js"><link rel="prefetch" href="/assets/js/27.00c9ce8b.js"><link rel="prefetch" href="/assets/js/28.93b27806.js"><link rel="prefetch" href="/assets/js/29.e1034423.js"><link rel="prefetch" href="/assets/js/30.2ad3e4be.js"><link rel="prefetch" href="/assets/js/31.8c71a2a8.js"><link rel="prefetch" href="/assets/js/32.9d5dc68a.js"><link rel="prefetch" href="/assets/js/33.36b762fa.js"><link rel="prefetch" href="/assets/js/34.891951ab.js"><link rel="prefetch" href="/assets/js/35.093fe8e7.js"><link rel="prefetch" href="/assets/js/36.cc411726.js"><link rel="prefetch" href="/assets/js/37.1c8e8b72.js"><link rel="prefetch" href="/assets/js/38.eb3dd3f3.js"><link rel="prefetch" href="/assets/js/39.c3c22467.js"><link rel="prefetch" href="/assets/js/4.30d0ea87.js"><link rel="prefetch" href="/assets/js/40.386646b3.js"><link rel="prefetch" href="/assets/js/41.10a7f304.js"><link rel="prefetch" href="/assets/js/42.c698429e.js"><link rel="prefetch" href="/assets/js/43.714b0e3d.js"><link rel="prefetch" href="/assets/js/44.2a2a83c0.js"><link rel="prefetch" href="/assets/js/45.d9fa748f.js"><link rel="prefetch" href="/assets/js/46.ec0fc1f3.js"><link rel="prefetch" href="/assets/js/47.d0e16d10.js"><link rel="prefetch" href="/assets/js/48.36039b87.js"><link rel="prefetch" href="/assets/js/49.0350aaf2.js"><link rel="prefetch" href="/assets/js/5.525d815a.js"><link rel="prefetch" href="/assets/js/50.6e3e2b69.js"><link rel="prefetch" href="/assets/js/51.0a5faf67.js"><link rel="prefetch" href="/assets/js/52.d6b65249.js"><link rel="prefetch" href="/assets/js/53.46f8d5b4.js"><link rel="prefetch" href="/assets/js/54.c234d49d.js"><link rel="prefetch" href="/assets/js/55.6ffa3515.js"><link rel="prefetch" href="/assets/js/56.c7df77c6.js"><link rel="prefetch" href="/assets/js/57.2bd1b943.js"><link rel="prefetch" href="/assets/js/58.abe4881e.js"><link rel="prefetch" href="/assets/js/59.d5572e04.js"><link rel="prefetch" href="/assets/js/6.dad7cee9.js"><link rel="prefetch" href="/assets/js/60.e4bd1d19.js"><link rel="prefetch" href="/assets/js/61.f17d16aa.js"><link rel="prefetch" href="/assets/js/62.4720bf52.js"><link rel="prefetch" href="/assets/js/63.ecb5c7c2.js"><link rel="prefetch" href="/assets/js/64.d17a3e5b.js"><link rel="prefetch" href="/assets/js/65.0f48f94a.js"><link rel="prefetch" href="/assets/js/66.e615d5f0.js"><link rel="prefetch" href="/assets/js/67.ec1f0f86.js"><link rel="prefetch" href="/assets/js/68.a0c8180f.js"><link rel="prefetch" href="/assets/js/69.526e40db.js"><link rel="prefetch" href="/assets/js/7.8f879c95.js"><link rel="prefetch" href="/assets/js/70.c0712bcf.js"><link rel="prefetch" href="/assets/js/71.cf0b1f93.js"><link rel="prefetch" href="/assets/js/72.7b468964.js"><link rel="prefetch" href="/assets/js/73.51bbf202.js"><link rel="prefetch" href="/assets/js/74.d4387ba5.js"><link rel="prefetch" href="/assets/js/75.8c768332.js"><link rel="prefetch" href="/assets/js/76.2ed3fbc8.js"><link rel="prefetch" href="/assets/js/77.cf750dbd.js"><link rel="prefetch" href="/assets/js/78.a18bc072.js"><link rel="prefetch" href="/assets/js/79.09d600c1.js"><link rel="prefetch" href="/assets/js/8.e0640fb0.js"><link rel="prefetch" href="/assets/js/80.55189d05.js"><link rel="prefetch" href="/assets/js/81.0394b32a.js"><link rel="prefetch" href="/assets/js/82.02be9f72.js"><link rel="prefetch" href="/assets/js/83.c5708459.js"><link rel="prefetch" href="/assets/js/84.9ca93a1f.js"><link rel="prefetch" href="/assets/js/85.6934d135.js"><link rel="prefetch" href="/assets/js/86.9e405380.js"><link rel="prefetch" href="/assets/js/87.694984f0.js"><link rel="prefetch" href="/assets/js/88.eea5d6f4.js"><link rel="prefetch" href="/assets/js/89.62c7a39c.js"><link rel="prefetch" href="/assets/js/9.718c26c6.js"><link rel="prefetch" href="/assets/js/90.f4a20c76.js"><link rel="prefetch" href="/assets/js/91.08606044.js"><link rel="prefetch" href="/assets/js/92.6c0216ba.js"><link rel="prefetch" href="/assets/js/93.3cec673f.js"><link rel="prefetch" href="/assets/js/94.ac728f6c.js"><link rel="prefetch" href="/assets/js/95.6ca5ccb0.js"><link rel="prefetch" href="/assets/js/96.cdd01ba3.js"><link rel="prefetch" href="/assets/js/97.1279a32f.js"><link rel="prefetch" href="/assets/js/98.c83dce5c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1e9b8424.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>yuan</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>yuan</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="yuan" class="logo"> <span class="site-name">yuan</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/运维相关/" class="nav-link"><i class="iconfont undefined"></i>
+  运维相关
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  前端学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开源/" class="nav-link"><i class="iconfont undefined"></i>
+  开源
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javaSE/" class="nav-link"><i class="iconfont undefined"></i>
+  javaSE
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaWeb/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js函数工具库/" class="nav-link"><i class="iconfont undefined"></i>
+  js函数工具库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/rust/" class="nav-link"><i class="iconfont undefined"></i>
+  rust
+</a></li><li class="dropdown-item"><!----> <a href="/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li><li class="dropdown-item"><!----> <a href="/categories/NodeJs/" class="nav-link"><i class="iconfont undefined"></i>
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/categories/NodeJS/" class="nav-link"><i class="iconfont undefined"></i>
+  NodeJS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/进阶/" class="nav-link"><i class="iconfont undefined"></i>
+  进阶
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/electron/" class="nav-link"><i class="iconfont undefined"></i>
+  electron
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue3/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/categories/LowCode/" class="nav-link"><i class="iconfont undefined"></i>
+  LowCode
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Tip/" class="nav-link"><i class="iconfont undefined"></i>
+  Tip
+</a></li><li class="dropdown-item"><!----> <a href="/categories/-测试/" class="nav-link"><i class="iconfont undefined"></i>
+  -测试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/language/" class="nav-link"><i class="iconfont undefined"></i>
+  language
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂七杂八/" class="nav-link"><i class="iconfont undefined"></i>
+  杂七杂八
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont undefined"></i>
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      email
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link"><i class="iconfont reco-mail"></i>
+  anchuanyuan1995@gmail
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-042e23d4><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-042e23d4> <h3 class="name" data-v-042e23d4>
+    yuan
+  </h3> <div class="num" data-v-042e23d4><div data-v-042e23d4><h3 data-v-042e23d4>108</h3> <h6 data-v-042e23d4>Article</h6></div> <div data-v-042e23d4><h3 data-v-042e23d4>35</h3> <h6 data-v-042e23d4>Tag</h6></div></div> <hr data-v-042e23d4></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/运维相关/" class="nav-link"><i class="iconfont undefined"></i>
+  运维相关
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端学习笔记/" class="nav-link"><i class="iconfont undefined"></i>
+  前端学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/开源/" class="nav-link"><i class="iconfont undefined"></i>
+  开源
+</a></li><li class="dropdown-item"><!----> <a href="/categories/javaSE/" class="nav-link"><i class="iconfont undefined"></i>
+  javaSE
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaWeb/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaWeb
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="iconfont undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js函数工具库/" class="nav-link"><i class="iconfont undefined"></i>
+  js函数工具库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/rust/" class="nav-link"><i class="iconfont undefined"></i>
+  rust
+</a></li><li class="dropdown-item"><!----> <a href="/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li><li class="dropdown-item"><!----> <a href="/categories/NodeJs/" class="nav-link"><i class="iconfont undefined"></i>
+  NodeJs
+</a></li><li class="dropdown-item"><!----> <a href="/categories/NodeJS/" class="nav-link"><i class="iconfont undefined"></i>
+  NodeJS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/进阶/" class="nav-link"><i class="iconfont undefined"></i>
+  进阶
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/electron/" class="nav-link"><i class="iconfont undefined"></i>
+  electron
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue3/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/categories/LowCode/" class="nav-link"><i class="iconfont undefined"></i>
+  LowCode
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Tip/" class="nav-link"><i class="iconfont undefined"></i>
+  Tip
+</a></li><li class="dropdown-item"><!----> <a href="/categories/-测试/" class="nav-link"><i class="iconfont undefined"></i>
+  -测试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/language/" class="nav-link"><i class="iconfont undefined"></i>
+  language
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂七杂八/" class="nav-link"><i class="iconfont undefined"></i>
+  杂七杂八
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/about.html" class="nav-link"><i class="iconfont undefined"></i>
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      email
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link"><i class="iconfont reco-mail"></i>
+  anchuanyuan1995@gmail
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>day06-vue组件开发</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_1-模块化的分类" class="sidebar-link">1.模块化的分类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#a-浏览器端的模块化" class="sidebar-link">A.浏览器端的模块化</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#b-服务器端的模块化" class="sidebar-link">B.服务器端的模块化</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#c-es6模块化" class="sidebar-link">C.ES6模块化</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_2-在nodejs中安装babel" class="sidebar-link">2.在NodeJS中安装babel</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_3-设置默认导入-导出" class="sidebar-link">3.设置默认导入/导出</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_4-设置按需导入-导出" class="sidebar-link">4.设置按需导入/导出</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_5-直接导入并执行代码" class="sidebar-link">5.直接导入并执行代码</a></li></ul></li><li><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_2-webpack的概念" class="sidebar-link">2.webpack的概念</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#webpack的基本使用" class="sidebar-link">webpack的基本使用</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#设置webpack的打包入口-出口" class="sidebar-link">设置webpack的打包入口/出口</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#设置webpack的自动打包" class="sidebar-link">设置webpack的自动打包</a></li></ul></li><li><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_3-vue单文件组件" class="sidebar-link">3.Vue单文件组件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_13-在webpack中使用vue" class="sidebar-link">13.在webpack中使用vue</a></li><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_14-使用webpack打包发布项目" class="sidebar-link">14.使用webpack打包发布项目</a></li></ul></li><li><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_4-vue脚手架" class="sidebar-link">4.Vue脚手架</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_16-vue脚手架的自定义配置" class="sidebar-link">16.Vue脚手架的自定义配置</a></li></ul></li><li><a href="/views/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2020/08-vue/day06_vue%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html#_5-element-ui的基本使用" class="sidebar-link">5.Element-UI的基本使用</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>day06-vue组件开发</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>yuan</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>day06-vue组件开发</h1> <hr> <div data-v-34ea29db><i class="iconfont reco-account" data-v-34ea29db><span data-v-34ea29db>yuan</span></i> <i class="iconfont reco-date" data-v-34ea29db><span data-v-34ea29db>2020-07-20</span></i> <!----> <i class="iconfont reco-tag tags" data-v-34ea29db><span class="tag-item" data-v-34ea29db>Vue</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="内容简介"><a href="#内容简介" class="header-anchor">#</a> 内容简介</h1> <p>1.模块化的相关规范
+2.webpack简介
+3.Vue单文件组件简介
+4.Vue脚手架简介
+5.Element-UI的使用</p> <h2 id="_1-模块化的分类"><a href="#_1-模块化的分类" class="header-anchor">#</a> 1.模块化的分类</h2> <h3 id="a-浏览器端的模块化"><a href="#a-浏览器端的模块化" class="header-anchor">#</a> A.浏览器端的模块化</h3> <div class="language- extra-class"><pre><code>    1).AMD(Asynchronous Module Definition,异步模块定义)
+    代表产品为：Require.js
+    2).CMD(Common Module Definition,通用模块定义)
+    代表产品为：Sea.js
+</code></pre></div><h3 id="b-服务器端的模块化"><a href="#b-服务器端的模块化" class="header-anchor">#</a> B.服务器端的模块化</h3> <div class="language- extra-class"><pre><code>    服务器端的模块化规范是使用CommonJS规范：
+    1).使用require引入其他模块或者包
+    2).使用exports或者module.exports导出模块成员
+    3).一个文件就是一个模块，都拥有独立的作用域
+</code></pre></div><h3 id="c-es6模块化"><a href="#c-es6模块化" class="header-anchor">#</a> C.ES6模块化</h3> <div class="language- extra-class"><pre><code>    ES6模块化规范中定义：
+        1).每一个js文件都是独立的模块
+        2).导入模块成员使用import关键字
+        3).暴露模块成员使用export关键字
+</code></pre></div><p>小结：推荐使用ES6模块化，因为AMD，CMD局限使用与浏览器端，而CommonJS在服务器端使用。
+ES6模块化是浏览器端和服务器端通用的规范.</p> <h3 id="_2-在nodejs中安装babel"><a href="#_2-在nodejs中安装babel" class="header-anchor">#</a> 2.在NodeJS中安装babel</h3> <h4 id="a-安装babel"><a href="#a-安装babel" class="header-anchor">#</a> A.安装babel</h4> <div class="language- extra-class"><pre><code>打开终端，输入命令：npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
+安装完毕之后，再次输入命令安装：npm install --save @babel/polyfill
+</code></pre></div><h4 id="b-创建babel-config-js"><a href="#b-创建babel-config-js" class="header-anchor">#</a> B.创建babel.config.js</h4> <div class="language- extra-class"><pre><code>在项目目录中创建babel.config.js文件。
+编辑js文件中的代码如下：
+    const presets = [
+        [&quot;@babel/env&quot;,{
+            targets:{
+                edge:&quot;17&quot;,
+                firefox:&quot;60&quot;,
+                chrome:&quot;67&quot;,
+                safari:&quot;11.1&quot;
+            }
+        }]
+    ]
+    //暴露
+    module.exports = { presets }
+</code></pre></div><h4 id="c-创建index-js文件"><a href="#c-创建index-js文件" class="header-anchor">#</a> C.创建index.js文件</h4> <div class="language- extra-class"><pre><code>在项目目录中创建index.js文件作为入口文件
+在index.js中输入需要执行的js代码，例如：
+    console.log(&quot;ok&quot;);
+</code></pre></div><h4 id="d-使用npx执行文件"><a href="#d-使用npx执行文件" class="header-anchor">#</a> D.使用npx执行文件</h4> <div class="language- extra-class"><pre><code>打开终端，输入命令：npx babel-node ./index.js
+</code></pre></div><h3 id="_3-设置默认导入-导出"><a href="#_3-设置默认导入-导出" class="header-anchor">#</a> 3.设置默认导入/导出</h3> <h4 id="a-默认导出"><a href="#a-默认导出" class="header-anchor">#</a> A.默认导出</h4> <div class="language- extra-class"><pre><code>export default {
+    成员A,
+    成员B,
+    .......
+},如下：
+let num = 100;
+export default{
+    num
+}
+</code></pre></div><h4 id="b-默认导入"><a href="#b-默认导入" class="header-anchor">#</a> B.默认导入</h4> <div class="language- extra-class"><pre><code>import 接收名称 from &quot;模块标识符&quot;，如下：
+import test from &quot;./test.js&quot;
+</code></pre></div><p>注意：在一个模块中，只允许使用export default向外默认暴露一次成员，千万不要写多个export default。
+如果在一个模块中没有向外暴露成员，其他模块引入该模块时将会得到一个空对象</p> <h3 id="_4-设置按需导入-导出"><a href="#_4-设置按需导入-导出" class="header-anchor">#</a> 4.设置按需导入/导出</h3> <h4 id="a-按需导出"><a href="#a-按需导出" class="header-anchor">#</a> A.按需导出</h4> <div class="language- extra-class"><pre><code>export let num = 998;
+export let myName = &quot;jack&quot;;
+export function fn = function(){ console.log(&quot;fn&quot;) }
+</code></pre></div><h4 id="b-按需导入"><a href="#b-按需导入" class="header-anchor">#</a> B.按需导入</h4> <div class="language- extra-class"><pre><code>import { num,fn as printFn ,myName } from &quot;./test.js&quot;
+//同时导入默认导出的成员以及按需导入的成员
+import test,{ num,fn as printFn ,myName } from &quot;./test.js&quot;
+</code></pre></div><p>注意：一个模块中既可以按需导入也可以默认导入，一个模块中既可以按需导出也可以默认导出</p> <h3 id="_5-直接导入并执行代码"><a href="#_5-直接导入并执行代码" class="header-anchor">#</a> 5.直接导入并执行代码</h3> <div class="language- extra-class"><pre><code>import &quot;./test2.js&quot;;
+</code></pre></div><h2 id="_2-webpack的概念"><a href="#_2-webpack的概念" class="header-anchor">#</a> 2.webpack的概念</h2> <p>webpack是一个流行的前端项目构建工具，可以解决目前web开发的困境。
+webpack提供了模块化支持，代码压缩混淆，解决js兼容问题，性能优化等特性，提高了开发效率和项目的可维护性</p> <h3 id="webpack的基本使用"><a href="#webpack的基本使用" class="header-anchor">#</a> webpack的基本使用</h3> <h4 id="a-创建项目目录并初始化"><a href="#a-创建项目目录并初始化" class="header-anchor">#</a> A.创建项目目录并初始化</h4> <div class="language- extra-class"><pre><code>创建项目，并打开项目所在目录的终端，输入命令：
+    npm init -y
+</code></pre></div><h4 id="b-创建首页及js文件"><a href="#b-创建首页及js文件" class="header-anchor">#</a> B.创建首页及js文件</h4> <div class="language- extra-class"><pre><code>在项目目录中创建index.html页面，并初始化页面结构：在页面中摆放一个ul，ul里面放置几个li
+在项目目录中创建js文件夹，并在文件夹中创建index.js文件
+</code></pre></div><h4 id="c-安装jquery"><a href="#c-安装jquery" class="header-anchor">#</a> C.安装jQuery</h4> <div class="language- extra-class"><pre><code>打开项目目录终端，输入命令:
+npm install jQuery -S
+</code></pre></div><h4 id="d-导入jquery"><a href="#d-导入jquery" class="header-anchor">#</a> D.导入jQuery</h4> <div class="language- extra-class"><pre><code>打开index.js文件，编写代码导入jQuery并实现功能：
+import $ from &quot;jquery&quot;;
+$(function(){
+    $(&quot;li:odd&quot;).css(&quot;background&quot;,&quot;cyan&quot;);
+    $(&quot;li:odd&quot;).css(&quot;background&quot;,&quot;pink&quot;);
+})
+</code></pre></div><p>注意：此时项目运行会有错误，因为import $ from &quot;jquery&quot;;这句代码属于ES6的新语法代码，在浏览器中可能会存在兼容性问题
+所以我们需要webpack来帮助我们解决这个问题。</p> <h4 id="e-安装webpack"><a href="#e-安装webpack" class="header-anchor">#</a> E.安装webpack</h4> <div class="language- extra-class"><pre><code>1).打开项目目录终端，输入命令:
+npm install webpack webpack-cli -D
+2).然后在项目根目录中，创建一个 webpack.config.js 的配置文件用来配置webpack
+在 webpack.config.js 文件中编写代码进行webpack配置，如下：
+module.exports = {
+    mode:&quot;development&quot;//可以设置为development(开发模式)，production(发布模式)
+}
+补充：mode设置的是项目的编译模式。
+如果设置为development则表示项目处于开发阶段，不会进行压缩和混淆，打包速度会快一些
+如果设置为production则表示项目处于上线发布阶段，会进行压缩和混淆，打包速度会慢一些
+3).修改项目中的package.json文件添加运行脚本dev，如下：
+&quot;scripts&quot;:{
+    &quot;dev&quot;:&quot;webpack&quot;
+}
+注意：scripts节点下的脚本，可以通过 npm run 运行，如：
+运行终端命令：npm run dev
+将会启动webpack进行项目打包
+4).运行dev命令进行项目打包，并在页面中引入项目打包生成的js文件
+打开项目目录终端，输入命令:
+npm run dev
+等待webpack打包完毕之后，找到默认的dist路径中生成的main.js文件，将其引入到html页面中。
+浏览页面查看效果。
+</code></pre></div><h3 id="设置webpack的打包入口-出口"><a href="#设置webpack的打包入口-出口" class="header-anchor">#</a> 设置webpack的打包入口/出口</h3> <div class="language- extra-class"><pre><code>在webpack 4.x中，默认会将src/index.js 作为默认的打包入口js文件
+                 默认会将dist/main.js 作为默认的打包输出js文件
+如果不想使用默认的入口/出口js文件，我们可以通过改变 webpack.config.js 来设置入口/出口的js文件，如下：
+const path = require(&quot;path&quot;);
+module.exports = {
+    mode:&quot;development&quot;,
+    //设置入口文件路径
+    entry: path.join(__dirname,&quot;./src/xx.js&quot;),
+    //设置出口文件
+    output:{
+        //设置路径
+        path:path.join(__dirname,&quot;./dist&quot;),
+        //设置文件名
+        filename:&quot;res.js&quot;
+    }
+}
+</code></pre></div><h3 id="设置webpack的自动打包"><a href="#设置webpack的自动打包" class="header-anchor">#</a> 设置webpack的自动打包</h3> <div class="language- extra-class"><pre><code>默认情况下，我们更改入口js文件的代码，需要重新运行命令打包webpack，才能生成出口的js文件
+那么每次都要重新执行命令打包，这是一个非常繁琐的事情，那么，自动打包可以解决这样繁琐的操作。
+实现自动打包功能的步骤如下：
+    A.安装自动打包功能的包:webpack-dev-server
+        npm install webpack-dev-server -D
+    B.修改package.json中的dev指令如下：
+        &quot;scripts&quot;:{
+            &quot;dev&quot;:&quot;webpack-dev-server&quot;
+        }
+    C.将引入的js文件路径更改为：&lt;script src=&quot;/bundle.js&quot;&gt;&lt;/script&gt;
+    D.运行npm run dev，进行打包
+    E.打开网址查看效果：http://localhost:8080
+
+注意：webpack-dev-server自动打包的输出文件，默认放到了服务器的根目录中.
+</code></pre></div><p>补充：
+在自动打包完毕之后，默认打开服务器网页，实现方式就是打开package.json文件，修改dev命令：
+&quot;dev&quot;: &quot;webpack-dev-server --open --host 127.0.0.1 --port 9999&quot;</p> <p>###10.配置html-webpack-plugin
+使用html-webpack-plugin 可以生成一个预览页面。
+因为当我们访问默认的 http://localhost:8080/的时候，看到的是一些文件和文件夹，想要查看我们的页面
+还需要点击文件夹点击文件才能查看，那么我们希望默认就能看到一个页面，而不是看到文件夹或者目录。
+实现默认预览页面功能的步骤如下：
+A.安装默认预览功能的包:html-webpack-plugin
+npm install html-webpack-plugin -D
+B.修改webpack.config.js文件，如下：
+//导入包
+const HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;);
+//创建对象
+const htmlPlugin = new HtmlWebpackPlugin({
+//设置生成预览页面的模板文件
+template:&quot;./src/index.html&quot;,
+//设置生成的预览页面名称
+filename:&quot;index.html&quot;
+})
+C.继续修改webpack.config.js文件，添加plugins信息：
+module.exports = {
+......
+plugins:[ htmlPlugin ]
+}</p> <p>###11.webpack中的加载器
+通过loader打包非js模块：默认情况下，webpack只能打包js文件，如果想要打包非js文件，需要调用loader加载器才能打包
+loader加载器包含：
+1).less-loader
+2).sass-loader
+3).url-loader:打包处理css中与url路径有关的文件
+4).babel-loader:处理高级js语法的加载器
+5).postcss-loader
+6).css-loader,style-loader</p> <div class="language- extra-class"><pre><code>注意：指定多个loader时的顺序是固定的，而调用loader的顺序是从后向前进行调用
+
+A.安装style-loader,css-loader来处理样式文件
+    1).安装包
+        npm install style-loader css-loader -D
+    2).配置规则：更改webpack.config.js的module中的rules数组
+    module.exports = {
+        ......
+        plugins:[ htmlPlugin ],
+        module : {
+            rules:[
+                {
+                    //test设置需要匹配的文件类型，支持正则
+                    test:/\.css$/,
+                    //use表示该文件类型需要调用的loader
+                    use:['style-loader','css-loader']
+                }
+            ]
+        }
+    }
+B.安装less,less-loader处理less文件
+    1).安装包
+        npm install less-loader less -D
+    2).配置规则：更改webpack.config.js的module中的rules数组
+    module.exports = {
+        ......
+        plugins:[ htmlPlugin ],
+        module : {
+            rules:[
+                {
+                    //test设置需要匹配的文件类型，支持正则
+                    test:/\.css$/,
+                    //use表示该文件类型需要调用的loader
+                    use:['style-loader','css-loader']
+                },
+                {
+                    test:/\.less$/,
+                    use:['style-loader','css-loader','less-loader']
+                }
+            ]
+        }
+    }
+C.安装sass-loader,node-sass处理less文件
+    1).安装包
+        npm install sass-loader node-sass -D
+    2).配置规则：更改webpack.config.js的module中的rules数组
+    module.exports = {
+        ......
+        plugins:[ htmlPlugin ],
+        module : {
+            rules:[
+                {
+                    //test设置需要匹配的文件类型，支持正则
+                    test:/\.css$/,
+                    //use表示该文件类型需要调用的loader
+                    use:['style-loader','css-loader']
+                },
+                {
+                    test:/\.less$/,
+                    use:['style-loader','css-loader','less-loader']
+                },
+                {
+                    test:/\.scss$/,
+                    use:['style-loader','css-loader','sass-loader']
+                }
+            ]
+        }
+    }
+
+    补充：安装sass-loader失败时，大部分情况是因为网络原因，详情参考：
+    https://segmentfault.com/a/1190000010984731?utm_source=tag-newest
+
+D.安装post-css自动添加css的兼容性前缀（-ie-,-webkit-）
+1).安装包
+    npm install postcss-loader autoprefixer -D
+2).在项目根目录创建并配置postcss.config.js文件
+const autoprefixer = require(&quot;autoprefixer&quot;);
+module.exports = {
+    plugins:[ autoprefixer ]
+}
+3).配置规则：更改webpack.config.js的module中的rules数组
+module.exports = {
+    ......
+    plugins:[ htmlPlugin ],
+    module : {
+        rules:[
+            {
+                //test设置需要匹配的文件类型，支持正则
+                test:/\.css$/,
+                //use表示该文件类型需要调用的loader
+                use:['style-loader','css-loader','postcss-loader']
+            },
+            {
+                test:/\.less$/,
+                use:['style-loader','css-loader','less-loader']
+            },
+            {
+                test:/\.scss$/,
+                use:['style-loader','css-loader','sass-loader']
+            }
+        ]
+    }
+}
+
+E.打包样式表中的图片以及字体文件
+在样式表css中有时候会设置背景图片和设置字体文件，一样需要loader进行处理
+使用url-loader和file-loader来处理打包图片文件以及字体文件
+1).安装包
+    npm install url-loader file-loader -D
+2).配置规则：更改webpack.config.js的module中的rules数组
+module.exports = {
+    ......
+    plugins:[ htmlPlugin ],
+    module : {
+        rules:[
+            {
+                //test设置需要匹配的文件类型，支持正则
+                test:/\.css$/,
+                //use表示该文件类型需要调用的loader
+                use:['style-loader','css-loader']
+            },
+            {
+                test:/\.less$/,
+                use:['style-loader','css-loader','less-loader']
+            },
+            {
+                test:/\.scss$/,
+                use:['style-loader','css-loader','sass-loader']
+            },{
+                test:/\.jpg|png|gif|bmp|ttf|eot|svg|woff|woff2$/,
+                //limit用来设置字节数，只有小于limit值的图片，才会转换
+                //为base64图片
+                use:&quot;url-loader?limit=16940&quot;
+            }
+        ]
+    }
+}
+
+F.打包js文件中的高级语法：在编写js的时候，有时候我们会使用高版本的js语法
+有可能这些高版本的语法不被兼容，我们需要将之打包为兼容性的js代码
+我们需要安装babel系列的包
+A.安装babel转换器
+    npm install babel-loader @babel/core @babel/runtime -D
+B.安装babel语法插件包
+    npm install @babel/preset-env @babel/plugin-transform-runtime @babel/plugin-proposal-class-properties -D
+C.在项目根目录创建并配置babel.config.js文件
+    
+    module.exports = {
+        presets:[&quot;@babel/preset-env&quot;],
+        plugins:[ &quot;@babel/plugin-transform-runtime&quot;, &quot;@babel/plugin-proposal-class-properties&quot; ]
+    }
+D.配置规则：更改webpack.config.js的module中的rules数组
+module.exports = {
+    ......
+    plugins:[ htmlPlugin ],
+    module : {
+        rules:[
+            {
+                //test设置需要匹配的文件类型，支持正则
+                test:/\.css$/,
+                //use表示该文件类型需要调用的loader
+                use:['style-loader','css-loader']
+            },
+            {
+                test:/\.less$/,
+                use:['style-loader','css-loader','less-loader']
+            },
+            {
+                test:/\.scss$/,
+                use:['style-loader','css-loader','sass-loader']
+            },{
+                test:/\.jpg|png|gif|bmp|ttf|eot|svg|woff|woff2$/,
+                //limit用来设置字节数，只有小于limit值的图片，才会转换
+                //为base64图片
+                use:&quot;url-loader?limit=16940&quot;
+            },{
+                test:/\.js$/,
+                use:&quot;babel-loader&quot;,
+                //exclude为排除项，意思是不要处理node_modules中的js文件
+                exclude:/node_modules/
+            }
+        ]
+    }
+}
+</code></pre></div><h2 id="_3-vue单文件组件"><a href="#_3-vue单文件组件" class="header-anchor">#</a> 3.Vue单文件组件</h2> <p>传统Vue组件的缺陷：
+全局定义的组件不能重名，字符串模板缺乏语法高亮，不支持css(当html和js组件化时，css没有参与其中)
+没有构建步骤限制，只能使用H5和ES5，不能使用预处理器（babel）
+解决方案：
+使用Vue单文件组件，每个单文件组件的后缀名都是.vue
+每一个Vue单文件组件都由三部分组成
+1).template组件组成的模板区域
+2).script组成的业务逻辑区域
+3).style样式区域</p> <p>代码如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;template&gt;
+
+    组件代码区域
+
+&lt;/template&gt;
+
+&lt;script&gt;
+
+    js代码区域
+
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+
+    样式代码区域
+
+&lt;/style&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>补充：安装Vetur插件可以使得.vue文件中的代码高亮</p> <p>配置.vue文件的加载器
+A.安装vue组件的加载器
+npm install vue-loader vue-template-compiler -D
+B.配置规则：更改webpack.config.js的module中的rules数组
+const VueLoaderPlugin = require(&quot;vue-loader/lib/plugin&quot;);
+const vuePlugin = new VueLoaderPlugin();
+module.exports = {
+......
+plugins:[ htmlPlugin, vuePlugin  ],
+module : {
+rules:[
+...//其他规则
+{
+test:/.vue$/,
+loader:&quot;vue-loader&quot;,</p> <div class="language- extra-class"><pre><code>            }
+        ]
+    }
+}
+</code></pre></div><h3 id="_13-在webpack中使用vue"><a href="#_13-在webpack中使用vue" class="header-anchor">#</a> 13.在webpack中使用vue</h3> <p>上一节我们安装处理了vue单文件组件的加载器，想要让vue单文件组件能够使用，我们必须要安装vue
+并使用vue来引用vue单文件组件。
+A.安装Vue
+npm install vue -S
+B.在index.js中引入vue：import Vue from &quot;vue&quot;
+C.创建Vue实例对象并指定el，最后使用render函数渲染单文件组件
+const vm = new Vue({
+el:&quot;#first&quot;,
+render:h=&gt;h(app)
+})</p> <h3 id="_14-使用webpack打包发布项目"><a href="#_14-使用webpack打包发布项目" class="header-anchor">#</a> 14.使用webpack打包发布项目</h3> <p>在项目上线之前，我们需要将整个项目打包并发布。
+A.配置package.json
+&quot;scripts&quot;:{
+&quot;dev&quot;:&quot;webpack-dev-server&quot;,
+&quot;build&quot;:&quot;webpack -p&quot;
+}
+B.在项目打包之前，可以将dist目录删除，生成全新的dist目录</p> <h2 id="_4-vue脚手架"><a href="#_4-vue脚手架" class="header-anchor">#</a> 4.Vue脚手架</h2> <p>Vue脚手架可以快速生成Vue项目基础的架构。
+A.安装3.x版本的Vue脚手架：
+npm install -g @vue/cli
+B.基于3.x版本的脚手架创建Vue项目：
+1).使用命令创建Vue项目
+命令：vue create my-project
+选择Manually select features(选择特性以创建项目)
+勾选特性可以用空格进行勾选。
+是否选用历史模式的路由：n
+ESLint选择：ESLint + Standard config
+何时进行ESLint语法校验：Lint on save
+babel，postcss等配置文件如何放置：In dedicated config files(单独使用文件进行配置)
+是否保存为模板：n
+使用哪个工具安装包：npm
+2).基于ui界面创建Vue项目
+命令：vue ui
+在自动打开的创建项目网页中配置项目信息。
+3).基于2.x的旧模板，创建Vue项目
+npm install -g @vue/cli-init
+vue init webpack my-project</p> <p>C.分析Vue脚手架生成的项目结构
+node_modules:依赖包目录
+public：静态资源目录
+src：源码目录
+src/assets:资源目录
+src/components：组件目录
+src/views:视图组件目录
+src/App.vue:根组件
+src/main.js:入口js
+src/router.js:路由js
+babel.config.js:babel配置文件
+.eslintrc.js:</p> <h3 id="_16-vue脚手架的自定义配置"><a href="#_16-vue脚手架的自定义配置" class="header-anchor">#</a> 16.Vue脚手架的自定义配置</h3> <div class="language- extra-class"><pre><code>A.通过 package.json 进行配置 [不推荐使用]
+    &quot;vue&quot;:{
+        &quot;devServer&quot;:{
+            &quot;port&quot;:&quot;9990&quot;,
+            &quot;open&quot;:true
+        }
+    }
+B.通过单独的配置文件进行配置，创建vue.config.js
+    module.exports = {
+        devServer:{
+            port:8888,
+            open:true
+        }
+    }
+</code></pre></div><h2 id="_5-element-ui的基本使用"><a href="#_5-element-ui的基本使用" class="header-anchor">#</a> 5.Element-UI的基本使用</h2> <p>Element-UI:一套基于2.0的桌面端组件库
+官网地址：http://element-cn.eleme.io/#/zh-CN
+A.安装：
+npm install element-ui -S
+B.导入使用：
+import ElementUI from &quot;element-ui&quot;;
+import &quot;element-ui/lib/theme-chalk/index.css&quot;;</p> <div class="language- extra-class"><pre><code>Vue.use(ElementUI)
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/1/2022, 9:11:50 AM</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.d4469e62.js" defer></script><script src="/assets/js/3.9c61cb9f.js" defer></script><script src="/assets/js/1.b69fc7ca.js" defer></script><script src="/assets/js/99.c5382660.js" defer></script>
+  </body>
+</html>
